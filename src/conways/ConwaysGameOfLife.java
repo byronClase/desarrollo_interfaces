@@ -1,3 +1,5 @@
+package conways;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.net.URI;
@@ -55,7 +57,9 @@ public class ConwaysGameOfLife extends JFrame implements ActionListener {
         m_file.add(mi_file_options);
         m_file.add(new JSeparator());
         m_file.add(mi_file_exit);
+
         mi_game_autofill = new JMenuItem("Autofill");
+
         mi_game_autofill.addActionListener(this);
         mi_game_play = new JMenuItem("Play");
         mi_game_play.addActionListener(this);
@@ -247,21 +251,28 @@ public class ConwaysGameOfLife extends JFrame implements ActionListener {
             d_gameBoardSize = new Dimension(getWidth()/BLOCK_SIZE-2, getHeight()/BLOCK_SIZE-2);
             updateArraySize();
         }
+
         @Override
         public void componentMoved(ComponentEvent e) {}
+
         @Override
         public void componentShown(ComponentEvent e) {}
+
         @Override
         public void componentHidden(ComponentEvent e) {}
+
         @Override
         public void mouseClicked(MouseEvent e) {}
+
         @Override
         public void mousePressed(MouseEvent e) {}
+
         @Override
         public void mouseReleased(MouseEvent e) {
             // Mouse was released (user clicked)
             addPoint(e);
         }
+
         @Override
         public void mouseEntered(MouseEvent e) {}
 
@@ -273,6 +284,7 @@ public class ConwaysGameOfLife extends JFrame implements ActionListener {
             // Mouse is being dragged, user wants multiple selections
             addPoint(e);
         }
+
         @Override
         public void mouseMoved(MouseEvent e) {}
 
